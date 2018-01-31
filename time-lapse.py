@@ -16,22 +16,22 @@ import requests
 #     base_url = os.environ['FARMWARE_URL']
 #     return base_url + 'api/v1/' if major_version > 5 else base_url
 
-# def log(message, message_type):
-#     'Send a message to the log.'
-#     try:
-#         os.environ['FARMWARE_URL']
-#     except KeyError:
-#         print(message)
-#     else:
-#         log_message = '[garden-time-lapse] ' + str(message)
-#         headers = {
-#             'Authorization': 'bearer {}'.format(os.environ['FARMWARE_TOKEN']),
-#             'content-type': "application/json"}
-#         payload = json.dumps(
-#             {"kind": "send_message",
-#              "args": {"message": log_message, "message_type": message_type}})
-#         requests.post(farmware_api_url() + 'celery_script',
-#                       data=payload, headers=headers)
+def log(message, message_type):
+    'Send a message to the log.'
+    try:
+        os.environ['FARMWARE_URL']
+    except KeyError:
+        print(message)
+    else:
+        log_message = '[garden-time-lapse] ' + str(message)
+        headers = {
+            'Authorization': 'bearer {}'.format(os.environ['FARMWARE_TOKEN']),
+            'content-type': "application/json"}
+        payload = json.dumps(
+            {"kind": "send_message",
+             "args": {"message": log_message, "message_type": message_type}})
+        requests.post(farmware_api_url() + 'celery_script',
+                      data=payload, headers=headers)
 
 
 # def image_filename():
@@ -114,6 +114,6 @@ if __name__ == '__main__':
     # points = response.json()
 
 
-    #log("SUCCESS! FARMWARE HAS BEEN RUN!")
+    log("SUCCESS! FARMWARE HAS BEEN RUN!")
 
     #print(json.dumps(points, indent=4, separators=(',', ': ')))
