@@ -1,0 +1,12 @@
+{
+ "package": "garden-time-lapse",
+ "language": "python",
+ "author": "Jason Vander Woude",
+ "description": "Take a photo of every plant in the garden using a USB or Raspberry Pi camera.",
+ "version": "0.0.1",
+ "min_os_version_major": 3,
+ "url": "https://raw.githubusercontent.com/jvwowd/garden-time-lapse/manifest.json",
+ "zip": "https://github.com/jvwowd/garden-time-lapse/archive/master.zip",
+ "executable": "python",
+ "args": ["garden-time-lapse-master/time-lapse.py"]
+}
