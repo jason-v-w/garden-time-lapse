@@ -5,10 +5,10 @@
 # Most of the code has been repurposed from other farmware including
 # plant-grid and take-photo
 ################################################################################
-import os
-from time import time, sleep
-import json
-import requests
+# import os
+# from time import time, sleep
+# import json
+# import requests
 
 
 # def farmware_api_url():
