@@ -1,5 +1,5 @@
 {
- "package": "take-photo",
+ "package": "garden-time-lapse",
  "language": "python",
  "author": "Farmbot.io",
  "description": "Take a photo using a USB or Raspberry Pi camera.",
