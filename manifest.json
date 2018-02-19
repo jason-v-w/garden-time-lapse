@@ -3,7 +3,7 @@
  "language": "python",
  "author": "Farmbot.io",
  "description": "Take a photo using a USB or Raspberry Pi camera.",
- "version": "1.0.2",
+ "version": "0.0.1",
  "min_os_version_major": 3,
  "url": "https://raw.githubusercontent.com/jvwowd/garden-time-lapse/master/manifest.json",
  "zip": "https://github.com/FarmBot-Labs/Take-Photo/archive/master.zip",
