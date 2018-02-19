@@ -10,7 +10,6 @@ import json
 import requests
 import numpy as np
 import cv2
-#import paho.mqtt.client as mqtt
 
 def farmware_api_url():
     major_version = int(os.getenv('FARMBOT_OS_VERSION', '0.0.0')[0])
@@ -120,22 +119,19 @@ def rpi_camera_photo():
     except OSError:
         log("Raspberry Pi Camera not detected.", "error")
 
-def get_points():
-    headers = {
-        'Authorization': 'bearer {}'.format(os.environ['FARMWARE_TOKEN']),
-        'content-type': "application/json"}
-    response = requests.get('https://my.farmbot.io/api/points', headers=headers)
-    points = response.json()
-    # reduce to only points corresponding to plants
-    points = [p for p in points if p["pointer_type"] == "Plant"]
-
-
-
+# def get_points():
+#     headers = {
+#         'Authorization': 'bearer {}'.format(os.environ['FARMWARE_TOKEN']),
+#         'content-type': "application/json"}
+#     response = requests.get('https://my.farmbot.io/api/points', headers=headers)
+#     points = response.json()
+#     # reduce to only points corresponding to plants
+#     points = [p for p in points if p["pointer_type"] == "Plant"]
 
 if __name__ == '__main__':
-    points = get_points()
-    for point in points:
-        log("({}, {}, {})".format(point["x"], point["y"], point["z"]), "error")
+    # points = get_points()
+    # for point in points:
+    #     log("({}, {}, {})".format(point["x"], point["y"], point["z"]), "error")
     try:
         CAMERA = os.environ['camera']
     except (KeyError, ValueError):
