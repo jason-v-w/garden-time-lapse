@@ -135,7 +135,7 @@ def get_points():
 if __name__ == '__main__':
     points = get_points()
     for point in points:
-        log("({}, {}, {})".format(point["x"], point["y"], point["z"], "info"))
+        log("({}, {}, {})".format(point["x"], point["y"], point["z"]), "error")
     try:
         CAMERA = os.environ['camera']
     except (KeyError, ValueError):
