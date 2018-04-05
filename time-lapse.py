@@ -24,7 +24,7 @@ def log(message, message_type):
     except KeyError:
         print(message)
     else:
-        log_message = '[take-photo] ' + str(message)
+        log_message = '[garden-time-lapse] ' + str(message)
         headers = {
             'Authorization': 'bearer {}'.format(os.environ['FARMWARE_TOKEN']),
             'content-type': "application/json"}
