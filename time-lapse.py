@@ -122,5 +122,7 @@ def rpi_camera_photo():
 
 if __name__ == '__main__':
     b = 3
-    log("Brandon is an idiot", "success")
+    log("Jason is an idiot?", "error")
+    log("Brandon is an idiot?", "success")
     b = 2
+
